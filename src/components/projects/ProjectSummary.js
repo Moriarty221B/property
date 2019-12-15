@@ -7,14 +7,14 @@ import {
   } from 'reactstrap';
 
 
-const ProjectSummary = ()=>{
+const ProjectSummary = ({project})=>{
     return(
 
         <div>
       <Card>
         <CardImg top width="100%" src="/img/penthouse.jpg" alt="Card image cap" />
         <CardBody>
-          <CardTitle>Rondebosch, R1 650 000</CardTitle>
+          <CardTitle>{project.title}</CardTitle>
           <CardSubtitle>3 bedroom penthouse</CardSubtitle>
           <CardText>Located in the good place close to the good things etcetera...</CardText>
         </CardBody>

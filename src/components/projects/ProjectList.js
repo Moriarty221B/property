@@ -3,11 +3,15 @@ import React from 'react'
 import ProjectSummary from './ProjectSummary'
 import {Link} from 'react-router-dom'
 
-const ProjectList= ()=>{
+const ProjectList= ({projects})=>{
     return(
         <div className="project-list section">
-            <ProjectSummary/>
-            <ProjectSummary/>
+            {/**map through objects if they exist and return project summary with assigned key value*/}
+            {projects && projects.map(project=>{
+                return(
+                    <ProjectSummary project={project} key={project.id}/>
+                )
+            })}
 
         </div>
     )
