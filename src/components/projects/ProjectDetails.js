@@ -1,4 +1,5 @@
 import React from 'react'
+import {NavLink} from 'react-router-dom'
 import {
     Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button
@@ -8,9 +9,9 @@ const ProjectsDetails=(props)=>{
     const id=props.match.params.id; //project id associated with each property post
 
     return(
-       <div>
+       <div className="container">
       <Card>
-        <CardImg top width="20%" src="/img/penthouse.jpg" alt="Card image cap" />
+        <CardImg top width="50%" src="/img/penthouse.jpg" alt="Card image cap" />
         <CardBody>
           <CardTitle>3 Bedroom Penthouse, Rondebosch</CardTitle>
           <CardSubtitle>R1 650 000 , Pam Golding</CardSubtitle>
@@ -20,7 +21,7 @@ const ProjectsDetails=(props)=>{
             Two dramatic stairways lead to the private bedroom suites, all boasting sleek en-suite baths, generous closets and wonderful views. The master bedroom is the ultimate retreat facing the Hudson River, complete with a spa-like onyx bath with a steam shower, Jacuzzi and sauna.
             Built in 1929 as a printing factory, 145 Hudson is full-service and pet-friendly in the heart of fashionable Tribeca. A deeded private parking is included with the sale of the penthouse.
             </CardText>
-          <Button>Button</Button>
+            <NavLink to='/contact'><Button>Contact</Button> </NavLink>
         </CardBody>
       </Card>
     </div>
