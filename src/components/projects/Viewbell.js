@@ -1,39 +1,56 @@
+//commponent to be opened when notification bell is clicked
 
+import React, { Component } from 'react';
+import Modal from 'react-awesome-modal';
 import {
-    Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button
-  } from 'reactstrap';
+  Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button
+} from 'reactstrap';
 
-const Viewbell = ()=> {
+export default class Viewbell extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            visible : false
+        }
+    }
 
-    return(
-        <div className="container">
-            <h5>The best value commercial properties available: </h5>
-        <div className="row">
-            <div className="col s12 m6">
-      <Card>
-        <CardImg top width="100%" src="/img/commercial1.jpg" alt="Card image cap" />
-        <CardBody>
-          <CardTitle>R7 209 000*, Century city</CardTitle>
-          <CardSubtitle>Suites avalaible to let or buy</CardSubtitle>
-          <CardText>An excellent sectional title in Bridgewater One development...</CardText>
-        </CardBody>
-      </Card>
+    openModal() {
+        this.setState({
+            visible : true
+        });
+    }
 
-      <Card>
-        <CardImg top width="100%" src="/img/commercial2.jpg" alt="Card image cap" />
-        <CardBody>
-          <CardTitle>R8 925 210, Century city</CardTitle>
-          <CardSubtitle>The Forum Business Park</CardSubtitle>
-          <CardText>This neat amd professional unit is situated on the...</CardText>
-        </CardBody>
-      </Card>
-      </div>
-      </div>
-      </div>
-    
-    )
+    closeModal() {
+        this.setState({
+            visible : false
+        });
+    }
 
+    render() {
+        return (
+          <div className="dashboard container">
+            <section>
+                <h1>Notifications</h1>
+                <input type="button" value="Click to view notifications" onClick={() => this.openModal()} />
+                <Modal visible={this.state.visible} width="500" height="500" effect="fadeInUp" onClickAway={() => this.closeModal()}>
+                    <div>
+                        <h3>Best new offers near you</h3>
+                        <p>Here are some of the properties that match you</p>
+                        <Card>
+                          <CardImg top width="40%" src="/img/villa.jpg" alt="Card image cap" />
+                          <CardBody>
+                            <CardTitle>R5 350 000, Llandudno</CardTitle>
+                            <CardSubtitle>Beach house available to rent or buy</CardSubtitle>
+                            <CardText>Surrounded by nature, this beach house is in one of the most breath taking locations on the water’s edge in the exclusive seaside neighbourhood of Llandudno...</CardText>
+                          </CardBody>
+                        </Card>
+                        <a href="javascript:void(0);" onClick={() => this.closeModal()}>Close</a>
+                    </div>
+                </Modal>
+            </section>
+            </div>
+        );
+    }
 }
 
-export default Viewbell
