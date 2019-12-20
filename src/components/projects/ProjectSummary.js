@@ -6,7 +6,7 @@ import {
     Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button
   } from 'reactstrap';
-import axios from 'axios';
+/**import axios from 'axios';
 
 class ProjectSummary extends Component{
   constructor(props) {
@@ -48,6 +48,25 @@ class ProjectSummary extends Component{
       )
   }
    
+}*/
+
+const ProjectSummary = ({project})=>{
+  return(
+
+      <div>
+    <Card>
+      <CardImg top width="100%" src={project.image} alt="Card image cap" />
+      <CardBody>
+        <CardTitle>{project.title}</CardTitle>
+        <CardSubtitle>{project.details}</CardSubtitle>
+        <CardText>{project.content}</CardText>
+      </CardBody>
+    </Card>
+  </div>
+      
+  )
 }
 
 export default ProjectSummary
+
+

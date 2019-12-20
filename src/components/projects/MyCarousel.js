@@ -7,8 +7,12 @@ class MyCarousel extends Component {
         return (
             <Carousel>
                 <div>
+                    <img  src="/img/penthouse.jpg" />
+                    <p className="legend">Living area 1</p>
+                </div>
+                <div>
                     <img src="/img/p1.jpg" />
-                    <p className="legend">Living area</p>
+                    <p className="legend">Living area 2</p>
                 </div>
                 <div>
                     <img src="/img/p2.jpg" />
