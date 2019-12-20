@@ -1,6 +1,7 @@
 /*Provides template for project details to show */
 
 import React, { Component } from 'react';
+
 import {
     Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button
@@ -39,6 +40,7 @@ class ProjectSummary extends Component{
               return <p>{property.name}</p>}) }</CardTitle>
             <CardSubtitle>3 bedroom penthouse</CardSubtitle>
             <CardText>Located in the good place close to the good things etcetera...</CardText>
+            
           </CardBody>
         </Card>
       </div>

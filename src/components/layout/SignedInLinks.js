@@ -9,7 +9,7 @@ const SignedInLinks = ()=>{
         <ul className="right">
             <li> <NavLink to='/'>Log Out</NavLink></li>
             <li> <NavLink to='/'>Home</NavLink></li>
-            <li> <NavLink to='/'>Properties</NavLink></li>
+            <li> <NavLink to='/projectdetails'>Properties</NavLink></li>
             <li> <NavLink to='/commercial'>Commercial</NavLink></li>
             <li> <NavLink to='/contact'>List privately</NavLink></li>
             <li> <NavLink to='viewbell/'><BellIcon width='20' height='20' color='yellow' active={true} animate={true} /></NavLink></li>

@@ -26,6 +26,7 @@ class  App extends Component {
             <Route path='/contact' component={Contact}/>
            <Route path='/viewbell' component={Viewbell}/>
             <Route path='/commercial' component={Commercial}/>
+            <Route path='/projectdetails' component={ProjectDetails}/>
           </Switch>
         </div>
 

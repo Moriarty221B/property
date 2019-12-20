@@ -31,7 +31,7 @@ export default class Viewbell extends Component {
         return (
           <div className="dashboard container">
             <section>
-                <h1>Notifications</h1>
+                <strong><h2>Notifications</h2></strong>
                 <input type="button" value="Click to view notifications" onClick={() => this.openModal()} />
                 <Modal visible={this.state.visible} width="500" height="500" effect="fadeInUp" onClickAway={() => this.closeModal()}>
                     <div>
